@@ -26,15 +26,19 @@ class Deck {
   shuffle() {
     cards.shuffle();
   }
+
+  cardsWithSuit(suit){
+    cards.map
+  }
 }
 
 class Card {
   String rank;
-  String suite;
+  String suit;
 
-  Card(this.rank, this.suite);
+  Card(this.rank, this.suit);
 
   toString(){
-    return "$rank of $suite";
+    return "$rank of $suit";
   }
 }
