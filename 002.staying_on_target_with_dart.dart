@@ -1,7 +1,7 @@
 void main() {
   var deck = new Deck();
   deck.shuffle();
-  print(deck);
+  print(deck.cardsWithSuit('Hearts'));
 }
 
 class Deck {
