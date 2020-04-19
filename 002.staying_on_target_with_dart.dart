@@ -27,16 +27,18 @@ class Deck {
     cards.shuffle();
   }
 
-  cardsWithSuit(suit){
-    cards.map
+  cardsWithSuit(String suit){
+    return cards.where((card) {
+      return card.suit == suit;
+    });
   }
 }
 
 class Card {
-  String rank;
   String suit;
+  String rank;
 
-  Card(this.rank, this.suit);
+  Card(this.suit, this.rank);
 
   toString(){
     return "$rank of $suit";
