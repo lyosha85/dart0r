@@ -19,7 +19,7 @@ class Deck {
     }
   }
   toString(){
-    return 'this is a Deck!';
+    return cards.toString();
   }
 }
 
@@ -28,4 +28,8 @@ class Card {
   String suite;
 
   Card(this.rank, this.suite);
+
+  toString(){
+    return "$rank of $suite";
+  }
 }
