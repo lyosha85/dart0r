@@ -1,7 +1,7 @@
 void main() {
   var deck = new Deck();
   deck.shuffle();
-  print(deck.cardsWithSuit('Hearts'));
+  print(deck.deal(2));
 }
 
 class Deck {
@@ -29,6 +29,12 @@ class Deck {
 
   cardsWithSuit(String suit){
     return cards.where((card) => card.suit == suit);
+  }
+
+  deal(int handSize){
+    var hand = cards.sublist(0, handSize);
+    cards = cards.sublist(handSize);
+    return hand;
   }
 }
 
